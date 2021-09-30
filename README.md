@@ -3,14 +3,13 @@
 a react component to detect new version of application
 
 ## Usage
-1. define a version.json
-    ```json
-    {
-      "v1.0.0": {}
-    }
-
+1. use webpack define plugin to inject version in package.json into your app
+1. render `<VersionDetector localVersion={version} />`
+1. deploy a /version.json which has the below data structure
     ```
-1. import that version.json as localVersion in VersionDetector
-1. use [copy-webpack-plugin](https://www.npmjs.com/package/copy-webpack-plugin) copy that version.json to output dir, if the url of the version.json is not `/version.json`, you need to set it manually through `url` props
-1. run or deploy your application
-In the project directory, you can run:
+    {
+      "version": "1.0.0"
+    }
+    ```
+    you can use `generate-json-webpack-plugin` to produce that version.json
+1. start your app
