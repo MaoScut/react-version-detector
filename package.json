@@ -3,32 +3,16 @@
   "version": "1.0.0",
   "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/semver": "^7.3.8",
-    "infra-design-icons": "^4.7.14",
-    "infrad": "^4.16.14",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "rimraf": "^3.0.2",
     "rxjs": "^7.3.0",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "infrad": "^4.16.14",
+    "react": "^17.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build:app": "react-scripts build",
     "build": "yarn clean && yarn build:esm && yarn build:cjs",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "build:esm": "tsc -p tsconfig.lib.json",
-    "build:cjs": "tsc -p tsconfig.lib.json --module commonjs --outDir dist/cjs"
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir dist/cjs"
   },
   "eslintConfig": {
     "extends": [
@@ -48,11 +32,15 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/react": "^17.0.0"
+  },
   "peerDependencies": {
+    "infra-design-icons": "^4.7.14",
+    "infrad": "^4.16.14",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-scripts": "4.0.3"
+    "typescript": "^4.1.2"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
