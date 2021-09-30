@@ -1,6 +1,6 @@
 {
   "name": "react-version-detector",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -16,12 +16,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "semver": "^7.3.5",
+    "rxjs": "^7.3.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "build:app": "react-scripts build",
     "build": "yarn clean && yarn build:esm && yarn build:cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
