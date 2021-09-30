@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
+import VersionDetector from 'react-version-detector'
 import './App.css';
-import VersionDetector from './lib/version-detector';
 
 function App() {
   return (

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Modal } from 'infrad'
 import { ExclamationCircleOutlined } from 'infra-design-icons'
 import { useState, useEffect } from 'react'
